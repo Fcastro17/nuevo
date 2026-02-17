@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Te amo Darling – Galaxia de Amor</title>
+
+<style>
+    body {
+        margin: 0;
+        background: black;
+        overflow: hidden;
+        font-family: "Arial", sans-serif;
+        color: white;
+        text-align: center;
+    }
+
+    /* Fondo galaxia animada */
+    body::before {
+        content: "";
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: url('https://i.imgur.com/9aKQK4v.jpeg') center/cover no-repeat;
+        filter: brightness(0.4);
+        z-index: -2;
+        animation: moverFondo 40s linear infinite;
+    }
+
+    @keyframes moverFondo {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.2); }
+        100% { transform: scale(1); }
+    }
+
+    /* Corazones flotando */
+    .corazon {
+        position: fixed;
+        bottom: -20px;
+        color: #ff66cc;
+        font-size: 20px;
+        animation: subir 6s linear infinite;
+        opacity: 0.8;
+    }
+
+    @keyframes subir {
+        0% { transform: translateY(0) scale(1); opacity: 1; }
+        100% { transform: translateY(-120vh) scale(1.8); opacity: 0; }
+    }
+
+    /* Título */
+    .titulo {
+        margin-top: 40px;
+        font-size: 40px;
+        text-shadow: 0 0 15px #ff00ff;
+    }
+
+    /* Texto animado */
+    #texto-animado {
+        font-size: 60px;
+        margin-top: 80px;
+        text-shadow: 0 0 25px #ff00ff;
+        animation: girar 10s linear infinite;
+        display: inline-block;
+    }
+
+    @keyframes girar {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+
+    /* Panel */
+    .panel {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(255, 255, 255, 0.1);
+        padding: 20px;
+        border-radius: 10px;
+        backdrop-filter: blur(5px);
+    }
+
+    input { widthPerfecto, aquí tienes una **versión mejorada, más romántica y con efectos especiales** de la página.  
+Incluye:
+
+✨ **Corazones flotando**  
+✨ **Efecto de galaxia animada**  
+✨ **Música suave de fondo**  
+✨ **Mensaje secreto que aparece al tocar/clickear**  
+✨ **Texto “Te amo Darling”**  
+
+Todo en un solo archivo listo para copiar y pegar.
+
+---
+
+# 🌌 **Código completo mejorado (versión romántica)**
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Te amo Darling – Galaxia de Amor</title>
+
+<style>
+    body {
+        margin: 0;
+        background: black;
+        overflow: hidden;
+        font-family: "Arial", sans-serif;
+        color: white;
+        text-align: center;
+    }
+
+    /* Fondo galaxia animada */
+    body::before {
+        content: "";
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: url('https://i.imgur.com/9aKQK4v.jpeg') center/cover no-repeat;
+        filter: brightness(0.4);
+        z-index: -2;
+        animation: moverFondo 40s linear infinite;
+    }
+
+    @keyframes moverFondo {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.2); }
+        100% { transform: scale(1); }
+    }
+
+    /* Corazones flotando */
+    .corazon {
+        position: fixed;
+        bottom: -20px;
+        color: #ff66cc;
+        font-size: 20px;
+        animation: subir 6s linear infinite;
+        opacity: 0.8;
+    }
+
+    @keyframes subir {
+        0% { transform: translateY(0) scale(1); opacity: 1; }
+        100% { transform: translateY(-120vh) scale(1.8); opacity: 0; }
+    }
+
+    /* Título */
+    .titulo {
+        margin-top: 40px;
+        font-size: 40px;
+        text-shadow: 0 0 15px #ff00ff;
+    }
+
+    /* Texto animado */
+    #texto-animado {
+        font-size: 60px;
+        margin-top: 80px;
+        text-shadow: 0 0 25px #ff00ff;
+        animation: girar 10s linear infinite;
+        display: inline-block;
+    }
+
+    @keyframes girar {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+
+    /* Panel */
+    .panel {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(255, 255, 255, 0.1);
+        padding: 20px;
+        border-radius: 10px;
+        backdrop-filter: blur(5px);
+    }
+
+    input { width: 200px; }
+
+    /* Mensaje secreto */
+    #secreto {
+        margin-top: 30px;
+        font-size: 25px;
+        opacity: 0;
+        transition: opacity 1s ease;
+        text-shadow: 0 0 15px #ff99ff;
+    }
+</style>
+</head>
+<body>
+
+<!-- Música de fondo -->
+<audio autoplay loop>
+    <source src="https://files.catbox.moe/3n6j7p.mp3" type="audio/mpeg">
+</audio>
+
+<h1 class="titulo">Te amo Darling – Galaxia de Amor</h1>
+
+<div id="texto-animado">💖 Darling 💖</div>
+
+<div id="secreto">Siempre serás mi universo ✨</div>
+
+<div class="panel">
+    <div>
+        Velocidad de rotación:
+        <input type="range" id="velocidad" min="2" max="20" value="10">
+    </div>
+    <div>
+        Brillo del texto:
+        <input type="range" id="brillo" min="5" max="50" value="25">
+    </div>
+    <div>
+        Escala del texto:
+        <input type="range" id="escala" min="1" max="3" step="0.1" value="1">
+    </div>
+    <button onclick="resetear()">Restablecer</button>
+</div>
+
+<script>
+    const texto = document.getElementById("texto-animado");
+    const secreto = document.getElementById("secreto");
+
+    const velocidad = document.getElementById("velocidad");
+    const brillo = document.getElementById("brillo");
+    const escala = document.getElementById("escala");
+
+    velocidad.oninput = () => texto.style.animationDuration = velocidad.value + "s";
+    brillo.oninput = () => texto.style.textShadow = `0 0 ${brillo.value}px #ff00ff`;
+    escala.oninput = () => texto.style.transform = `scale(${escala.value})`;
+
+    function resetear() {
+        velocidad.value = 10;
+        brillo.value = 25;
+        escala.value = 1;
+
+        texto.style.animationDuration = "10s";
+        texto.style.textShadow = "0 0 25px #ff00ff";
+        texto.style.transform = "scale(1)";
+    }
+
+    // Mensaje secreto al hacer clic
+    document.body.onclick = () => {
+        secreto.style.opacity = 1;
+    };
+
+    // Corazones flotando
+    setInterval(() => {
+        const corazon = document.createElement("div");
+        corazon.className = "corazon";
+        corazon.innerHTML = "💖";
+        corazon.style.left = Math.random() * 100 + "vw";
+        corazon.style.fontSize = (20 + Math.random() * 30) + "px";
+        document.body.appendChild(corazon);
+
+        setTimeout(() => corazon.remove(), 6000);
+    }, 500);
+</script>
+
+</body>
+</html>
